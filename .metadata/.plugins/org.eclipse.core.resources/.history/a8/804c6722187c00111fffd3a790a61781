@@ -1,0 +1,10 @@
+package com.shyam.restful;
+
+public interface HelloWorld {
+	
+	public String username;
+	public String pasword;
+	public int stud_no;
+	
+
+}

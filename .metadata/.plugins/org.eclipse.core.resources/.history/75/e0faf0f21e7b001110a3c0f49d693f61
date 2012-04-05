@@ -1,0 +1,31 @@
+package com.shyam.manytoone;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.classic.Session;
+
+import com.shyam.manytoone.util.HibernateUtil;
+
+public class main {
+
+	public static void main(String s[])throws Exception
+	{
+	
+		try{
+			
+			SessionFactory factory = HibernateUtil.getSessionFactory();
+			Session session= factory.openSession();
+			Transaction  transaction = session.beginTransaction();
+			
+			Address address1 = new Address("ABCDStreet","ABCCITY","ABSSTATE","12345");
+			Student student = new Student("shyam",address1);;
+			
+			
+			
+			
+		}catch(Exception ex)
+		{
+			
+		}
+	}
+}

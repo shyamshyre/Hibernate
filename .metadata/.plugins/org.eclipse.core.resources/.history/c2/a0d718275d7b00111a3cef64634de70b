@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.shyam.onetomany.Student" table="STUDENT">
+	<meta attribute="class-description">
+	This class contains the Student details.
+	</meta>
+	<id name="student_id" type="int" column="STUDENT_ID">
+		<generator class="identity"/>
+	</id>
+	<property name="student_name" type="string" column="STUDENT_NAME" not-null="true" />
+	
+	
+	<set name="phone" cascade="all" table="STUDENT_PHONE">
+	    <key column="STUDENT_ID"/>
+	       <many-to-many class="com.shyam.onetomany.Phone" unique="true"  column="phone_id">
+	       </many-to-many> 
+	</set> 
+	
+</class>
+
+</hibernate-mapping>

@@ -1,0 +1,8 @@
+package com.shyam.restful;
+
+public interface HelloWorld {
+	
+	public String sayHello();
+	
+
+}

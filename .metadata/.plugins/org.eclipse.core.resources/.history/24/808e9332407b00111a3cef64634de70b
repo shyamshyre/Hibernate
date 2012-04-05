@@ -1,0 +1,11 @@
+package com.shyam.onetomany;
+
+import java.util.Set;
+
+public class Student {
+
+ private int student_id;
+ private String student_name;
+ private Set<Phone> phone;
+ 
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="J2EE_EXPORT_OVERWRITE"/>
+	<item value="false" key="J2EE_EXPORT_SOURCE"/>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="D:\DevTools\apache-tomcat-6.0.18\webapps\RestFull.war"/>
+		<item value="C:\Users\sss\Desktop\Restful.war"/>
+		<item value="C:\Users\sss\Desktop\CXF1.war"/>
+		<item value="C:\Users\sss\Desktop\CXF.war"/>
+	</list>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="Apache Tomcat v6.0"/>
+		<item value="VMware vFabric tc Server Developer Edition (Runtime) v2.6"/>
+	</list>
+</section>

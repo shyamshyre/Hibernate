@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.m.manytoone.Student table="STUDENT">
+	<meta attribute="class-description">
+	This class contains the Student details.
+	</meta>
+	<id name="student_id" type="long" column="COURSE_ID">
+		<generator class="identity"/>
+	</id>
+	<property name="student_name" type="string" column="STUDENT_NAME" not-null="true" />
+	<property name="student_address" type="string" column="STUDENT_ADDRESS" not-null="true" />
+</class>
+
+</hibernate-mapping>

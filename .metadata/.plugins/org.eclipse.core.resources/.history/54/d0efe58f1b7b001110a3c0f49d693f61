@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <class name="" column="">
+        <id name="address_id" type="long" column="ADDRESS_ID">
+		<generator class="identity"/>
+	</id>
+	<property name="addres_street" type="string" columns="ADDRESS_STREET">
+	    
+	</property>
+	<property name="address_city" type="string" columns="ADDRESS_CITY">
+	    
+	</property>
+	
+	<property name="addres_state" type="string" columns="ADDRESS_STATE">
+	    
+	</property>
+
+		<property name="address_zipcode" type="string" columns="ADDRESS_ZIPCODE">
+	    
+	</property>	
+        
+    </class>
+</hibernate-configuration>

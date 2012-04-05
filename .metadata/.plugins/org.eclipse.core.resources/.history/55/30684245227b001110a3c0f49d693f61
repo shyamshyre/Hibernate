@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.shyam.manytoone.Address" table="ADDRESS">
+	   <id name="addressId" type="long" column="ADDRESS_ID"> 
+        <generator class="identity" /> 
+   		</id> 
+        
+	
+	<property name="address_city" type="string" column="ADDRESS_CITY">
+	    
+	</property>
+	
+	<property name="addres_state" type="string" column="ADDRESS_STATE">
+	    
+	</property>
+
+	<property name="address_zipcode" type="string" column="ADDRESS_ZIPCODE">
+	    
+	</property>	
+        
+    </class>
+</hibernate-mapping>

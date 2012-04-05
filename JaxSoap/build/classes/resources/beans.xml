@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+  xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://cxf.apache.org/jaxrs
+http://cxf.apache.org/schemas/jaxrs.xsd">
+
+  <!-- do not use import statements if CXFServlet init parameters link to this beans.xml --> 
+
+  <import resource="classpath:META-INF/cxf/cxf.xml" />
+  <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+  <!-- use following url to see result: http://localhost:8989/RestFull/services/service1/customerservice/customers/123 -->
+    <jaxrs:server id="customerService"
+      serviceClass="main.java.demo.jaxrs.server.CustomerService"
+      address="/service1"/>
+  
+</beans>

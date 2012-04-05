@@ -1,0 +1,9 @@
+
+public class Phone {
+
+	int phone;
+	String model;
+	String name;
+	
+
+}

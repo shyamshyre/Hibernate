@@ -1,0 +1,27 @@
+package com.shyam.manytoone;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.classic.Session;
+
+import com.shyam.manytoone.util.HibernateUtil;
+
+public class main {
+
+	public static void main(String s[])throws Exception
+	{
+	
+		try{
+			
+			SessionFactory factory = HibernateUtil.getSessionFactory();
+			Session session= factory.openSession();
+			
+			
+			
+			
+			
+		}catch(Exception ex)
+		{
+			
+		}
+	}
+}

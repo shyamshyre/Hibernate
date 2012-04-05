@@ -1,0 +1,5 @@
+package com.shyam.manytoone.util;
+
+public class HibernateUtil {
+
+}

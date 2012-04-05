@@ -1,0 +1,46 @@
+package com.shyam.onetomany;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.HibernateException;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.classic.Session;
+
+import com.shyam.onetomany.*;
+
+public class Main {
+
+	public static void main(String s[])throws Exception
+	{
+	
+	
+			SessionFactory factory = HibernateUtil.getSessionFactory();
+			Session session= factory.openSession();
+			Transaction  transaction = session.beginTransaction();
+			try {
+				transaction = session.beginTransaction();
+				 
+				Set<Phone> phoneNumbers = new HashSet<Phone>();
+				//Set<Phone> phoneNumbers1 = new HashSet<Phone>();
+				phoneNumbers.add(new Phone("house","32354353"));
+				phoneNumbers.add(new Phone("mobile","9889343423"));
+				
+				//phoneNumbers1.add(new Phone("house","32354353"));
+				//phoneNumbers1.add(new Phone("mobile","9889343423"));
+			
+				
+				Student student1 = new Student("Eswar", phoneNumbers);
+				Student student2 = new Student("Ram", phoneNumbers);
+				session.save(student1);
+				session.save(student2);
+				transaction.commit();
+				} catch (HibernateException e) {
+				transaction.rollback();
+				e.printStackTrace();
+				} finally {
+				session.close();
+				}
+	}
+}
